@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use Illuminate\Routing\RouteGroup;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,11 @@ Route::get('/', HomeController::class)->name('home');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('cursos',function () {
+    return "aqui se monstraran los cursos";
+})->name('courses.index');
+
+Route::get('cursos/{course}',function ($course) {
+    return "aqui se va a mostrar la informacion de los cursos";
+})->name('course.show');
