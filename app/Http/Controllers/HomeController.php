@@ -8,6 +8,11 @@ class HomeController extends Controller
 {
     public function __invoke(){
 
-        return view('welcome');
-    }
+
+        $courses =Course::where('status',3)->latest('id')->get();
+ 
+ 
+ 
+         return view('welcome',compact('courses'));
+     }
 }
