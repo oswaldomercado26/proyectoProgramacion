@@ -15,6 +15,7 @@ class Course extends Model
     const REVISION = 2;
     const PUBLICADO = 3;
 
+    
     public function getRatingAttribute(){
         if($this->reviews_count){
             return round($this->reviews->avg('rating'),1);
@@ -23,6 +24,20 @@ class Course extends Model
         }
         
     }
+
+    //query scopes
+    public function scopeCategory($query,$category_id){
+        if($category_id){
+            return $query->where('category_id',$category_id);
+        }
+    }
+
+    public function scopeLevel($query,$level_id){
+        if($level_id){
+            return $query->where('level_id',$level_id);
+        }
+    }
+
     public function getRouteKeyName()
     {
         return "slug";
