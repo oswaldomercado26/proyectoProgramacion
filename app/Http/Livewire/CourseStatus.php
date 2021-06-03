@@ -16,26 +16,44 @@ class CourseStatus extends Component
         foreach($course->lessons as $lesson){
             if(!$lesson->completed){
                 $this->current=$lesson;
-                //indice
+                
                 break;
                 
 
 
             }
         }
+        if(!$this->current){
+            $this->current= $course->lessons->last();
+        }
 
     }
     public function render()
     {
         return view('livewire.course-status');
+
     }
+    //metodos
     public function changeLesson(Lesson $lesson){
         $this->current=$lesson;
     
         
        
     }
+    public function completed(){
+        if($this->current->completed){
+            //eliminar registro
+            $this->current->users()->detach(auth()->user()->id); 
+        }
+        else{
+            //agregar registro
+            $this->current->users()->attach(auth()->user()->id); 
+        }
+        $this->current=Lesson::find($this->current->id);
+        $this->course=Course::find($this->course->id);
+    }
 
+    //propiedades computadas
     public function getIndexProperty()
     {
         return $this->course->lessons->pluck('id')->search($this->current->id);
@@ -59,5 +77,19 @@ class CourseStatus extends Component
     
             return $this->course->lessons[$this->index + 1];
            }
+    }
+    public function getAdvanceProperty()
+    {
+        $i=0;
+        foreach ($this->course->lessons as $lesson) {
+            if($lesson->completed){
+                $i++;
+            }
+        }
+
+        $advance=($i*100)/($this->course->lessons->count());
+        
+        return round($advance,2);
+        
     }
 }
