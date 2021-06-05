@@ -237,10 +237,7 @@ return [
         ],
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -250,12 +247,14 @@ return [
             'text'        => 'Dashboard',
             'route'         => 'admin.home',
             'icon'        => 'fas fa-fw fa-user-cog',
+            'can'  => 'Ver dashboard'
            
         ],
         [
             'text'        => 'Lista de roles',
             'route'         => 'admin.roles.index',
             'icon'        => 'fas fa-fw fa-tachometer-alt',
+            'can'  =>'Listar role',
             'active' =>['admin/roles*']
            
         ],
@@ -263,6 +262,7 @@ return [
             'text'        => 'Usuarios',
             'route'         => 'admin.users.index',
             'icon'        => 'fas fa-fw fa-users',
+            'can'  => 'Leer usuarios',
             'active' =>['admin/users*']
            
         ],
