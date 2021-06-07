@@ -1,10 +1,11 @@
 <div class="container">
     <!-- This example requires Tailwind CSS v2.0+ -->
     <x-table-responsive>
-        {{--checar por que no me detecta la separacion ni los estilos--}}
-        <div class="py-10 px-6">
-            <input wire:Keydown='limpiar_page' wire:model="search" class="form-input w-full shadow-sm" placeholder="Escribe un nombre...">
+       
+        <div class="py-10 px-6 flex">
 
+            <input wire:Keydown='limpiar_page' wire:model="search" class="form-input flex-1 shadow-sm" placeholder="Escribe un nombre...">
+            <a class="btn btn-danger ml-2" href="{{route('instructor.courses.create')}}">Crear nuevo curso</a>
         </div>
         @if ($courses->count())
             
@@ -37,7 +38,13 @@
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0 h-10 w-10">
-                                <img class="h-10 w-10 rounded-full" src="{{Storage::url($course->image->url)}}" alt="">
+                                @isset($course->image)
+                                <img class="h-10 w-10 rounded-full object-cover object-center" src="{{Storage::url($course->image->url)}}" alt="">
+
+                                @else
+                                <img class="h-10 w-10 rounded-full object-cover object-center" src="https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                    
+                                @endisset
                                 </div>
                                 <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
@@ -103,7 +110,7 @@
                         </td>
                         
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                        <a href="{{route('instructor.courses.edit',$course)}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                         </td>
                 </tr>
                 @endforeach

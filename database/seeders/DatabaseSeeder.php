@@ -14,9 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
 
     {
-        Storage::deleteDirectory('cursos');
-        Storage::makeDirectory('cursos');
-        // \App\Models\User::factory(10)->create();
+        Storage::deleteDirectory('courses');
+        Storage::makeDirectory('courses');
 
         $this->call(PermissionSeeder::class);
         $this->call(RoleSeeder::class);
@@ -26,6 +25,5 @@ class DatabaseSeeder extends Seeder
         $this->call(PriceSeeder::class);
         $this->call(PlatformSeeder::class);
         $this->call(CourseSeeder::class);
-   
     }
 }
