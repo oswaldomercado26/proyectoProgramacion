@@ -1,10 +1,10 @@
-<x-instructor-layout>
-   <x-slot name="course">
-        {{ $course->slug }}
-   </x-slot>
+<x-instructor-layout :course="$course">
+  
+
+
 
     <h1 class="text-2xl font-bold ">INFORMACION DEL CURSO</h1>
-                        <hr class="mb-6 mt-2">
+    <hr class="mb-6 mt-2">
         
                         {!! Form::model($course, ['route' => ['instructor.courses.update', $course],'method'=>'put','files'=>'true']) !!}
         
@@ -20,4 +20,5 @@
         <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
        <script src="{{asset('js/instructor/courses/form.js')}}"> </script>
     </x-slot>
+    
 </x-instructor-layout>
