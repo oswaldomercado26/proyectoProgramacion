@@ -34,4 +34,12 @@ class CoursePolicy
         }
     }
 
+    public function dicataded(User $user, Course $course){
+        if($course->user_id ==$user->id){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
