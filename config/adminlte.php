@@ -273,6 +273,11 @@ return [
             'icon' => 'fas fa-fw fa-cogs',
         ],
         [
+            'text' => 'Niveles',
+            'route'  => 'admin.levels.index',
+            'icon' => 'fas fa-fw fa-chart-line',
+        ],
+        [
             'text' => 'Pendientes de aprobacion',
             'route'  => 'admin.courses.index',
             'icon' => 'fas fa-fw fa-user',
