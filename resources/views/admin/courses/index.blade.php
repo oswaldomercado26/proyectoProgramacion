@@ -3,7 +3,7 @@
 @section('title', '¡Course')
 
 @section('content_header')
-    <h1>¡Course pendientes de aprobacion.</h1>
+    <h1>Cursos pendientes de aprobacion.</h1>
 @stop
 
 @section('content')
@@ -19,9 +19,9 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Titulo</th>
                         <th>Categoria</th>
-                        <th ></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

@@ -68,11 +68,11 @@
                             
                             @break
                         @case(3)
-                        div class="card text-gray-500">
-                        <div class="card-body">
-                            Este curso se encuentra aprobado
+                        <div class="card text-gray-500">
+                            <div class="card-body">
+                                Este curso se encuentra publicado
+                            </div>
                         </div>
-                    </div>
                             @break
                         @default
                             

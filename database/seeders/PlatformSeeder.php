@@ -19,7 +19,7 @@ class PlatformSeeder extends Seeder
         ]);
 
         Platform::create([
-            'name' => 'Video'
+            'name' => 'Vimeo'
         ]);
     }
 }
