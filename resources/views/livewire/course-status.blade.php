@@ -11,13 +11,23 @@
                 {{$current->description->name}}
             </div>
             @endif   
-            <div class="flex items-center mt-4 cursor-pointer" wire:click="completed">
-                @if ($current->completed)
-                <i class="fa fa-toggle-on text-2xl text-blue-600"></i>
-                @else
-                     <i class="fa fa-toggle-off text-2xl text-gray-600"></i>
+            <div class="flex justify-between mt-4">
+                {{--marcar como culminada--}}
+                <div class="flex items-center  cursor-pointer" wire:click="completed">
+                    @if ($current->completed)
+                    <i class="fa fa-toggle-on text-2xl text-blue-600"></i>
+                    @else
+                        <i class="fa fa-toggle-off text-2xl text-gray-600"></i>
+                    @endif
+                    <p class="text-sm ml-2">Marcar unidad como culminada</p>
+                </div>
+                @if ($current->resource)
+                    <div class="flex items-center text-gray-600 cursor-pointer" wire:click="download">
+                        <i class="fa fa-download text-lg  "></i>
+                        <p class="text-sm ml-2">Descargar recursos</p>
+                    </div>
+
                 @endif
-                <p class="text-sm ml-2">Marcar unidad como culminada</p>
             </div>
 
             <div class="card mt-2">
