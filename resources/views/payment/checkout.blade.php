@@ -12,7 +12,7 @@
                     <p class="text-xl font-bold ml-auto">$ {{$course->price->value}}</p>
                 </article>
                 <div class='flex justify-end mt-2 mb-4'>
-                    <a href="" class="btn btn-primary">Comprar curso</a>
+                    <a href="{{route('payment.pay',$course)}}" class="btn btn-primary">Comprar curso</a>
 
                 </div>
                 <hr>
