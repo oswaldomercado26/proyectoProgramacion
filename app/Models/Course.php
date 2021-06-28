@@ -43,7 +43,7 @@ class Course extends Model
         return "slug";
     }
     //relacion uno a uno
-    public function Observation(){
+    public function observation(){
         return $this->hasOne('App\Models\Observation');
     }
 

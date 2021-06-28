@@ -1,4 +1,9 @@
 <section>
+    @if (session('info'))
+    <div class="alert alert-success bg bg-green-600 mt-4 font-bold text-center text-2xl">
+        {{session('info')}}
+    </div>  
+    @endif
   <h1 class="text-2xl font-bold">METAS DEL CURSO</h1>
     <hr class="mt-2 mb-6">
 

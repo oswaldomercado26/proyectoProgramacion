@@ -36,6 +36,7 @@ class CourseController extends Controller
 
         //envie el correo electronico
         $mail = new ApprovedCourse($course);
+        //utilizacion de quues para optimizar el trabajo de los correos
         Mail::to($course->teacher->email)->queue($mail);
 
         return redirect()->route('admin.courses.index')->with('info','El curso se publico con exito');
@@ -45,7 +46,7 @@ class CourseController extends Controller
         return view('admin.courses.observation',compact('course'));
     }
 
-    public function reject(Course $course,Request $request){
+    public function reject(Request $request,Course $course){
         $request->validate([
             'body' => 'required'
         ]);

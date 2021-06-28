@@ -58,9 +58,7 @@
     </figure>
 
     <div>
-        <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto magni nihil optio reiciendis
-            temporibus? Assumenda consequuntur dignissimos dolorum fuga magnam nulla pariatur
-            praesentium quae reiciendis repellat rerum sint, tempore, temporibus.</p>
+        <p class="mb-2">la siguiente imagen que puede disponer a subir puede ser de cualquier tamaño siempre y cuando sean cuadradas en los formatos jpg y png.</p>
         {!! Form::file('file',['class' => 'form-input w-full' . ($errors->has('file') ? ' border-red-600' : ''),'id' => 'file','accept' => 'image/*']) !!}
 
         @error('file')

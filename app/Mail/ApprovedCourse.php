@@ -28,6 +28,7 @@ class ApprovedCourse extends Mailable
      *
      * @return $this
      */
+    //se encarga de traernos la vista del correo electronico
     public function build()
     {
         return $this->view('mail.approved-course')

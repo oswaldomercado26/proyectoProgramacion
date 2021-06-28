@@ -10,7 +10,7 @@ use App\Models\Course;
 class RejectCourse extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $course;
     /**
      * Create a new message instance.
      *

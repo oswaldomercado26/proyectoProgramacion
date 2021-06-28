@@ -17,6 +17,7 @@ class CreateObservationsTable extends Migration
             $table->id();
             $table->text('body');
             $table->unsignedBigInteger('course_id');
+            //on casacade es para cuando se elimine algo del curso se elimine todo
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->timestamps();
         });

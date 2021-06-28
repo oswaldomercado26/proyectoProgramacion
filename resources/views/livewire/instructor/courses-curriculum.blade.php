@@ -1,5 +1,10 @@
 <div>
-   
+ 
+    @if (session('info'))
+    <div class="alert alert-success text-2xl">
+        {{session('info')}}
+    </div>  
+    @endif
 
     <h1 class="text-2xl fond-bold">LECCIONES DEL CURSO</h1>
 

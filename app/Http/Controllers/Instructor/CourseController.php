@@ -45,7 +45,7 @@ class CourseController extends Controller
         $levels = Level::pluck('name','id');
         $prices = Price::pluck('name','id');
 
-        return view('instructor.courses.create',compact('categories','levels','prices'));
+        return view('instructor.courses.create',compact('categories','levels','prices'))->with('info','El curso se creo con exito');
     }
 
     /**
@@ -81,7 +81,7 @@ class CourseController extends Controller
 
         
 
-        return redirect()->route('instructor.courses.edit',$course);
+        return redirect()->route('instructor.courses.edit',$course)->with('info','El curso se actualizo con exito');
     }
 
     /**
@@ -111,7 +111,7 @@ class CourseController extends Controller
 
 
         
-        return view('instructor.courses.edit',compact('course','categories','levels','prices'));
+        return view('instructor.courses.edit',compact('course','categories','levels','prices'))->with('info','El curso se actualizo con exito');
     }
 
     /**
@@ -153,7 +153,7 @@ class CourseController extends Controller
             }
         }
 
-        return redirect()->route('instructor.courses.edit',$course);
+        return redirect()->route('instructor.courses.edit',$course)->with('info','El curso se actualizo con exito');
 
     }
 
@@ -170,7 +170,7 @@ class CourseController extends Controller
 
     public function goals(Course $course){
         $this->authorize('dicataded', $course);
-        return view('instructor.courses.goals', compact('course'));
+        return view('instructor.courses.goals', compact('course'))->with('info','Se añadieron las metas con exito');
     }
 
     public function status(Course $course){

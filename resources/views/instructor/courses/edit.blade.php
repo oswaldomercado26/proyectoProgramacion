@@ -1,9 +1,11 @@
 <x-instructor-layout :course="$course">
   
-
-
+  
+    <hr class="mb-6 mt-2">
 
     <h1 class="text-2xl font-bold ">INFORMACION DEL CURSO</h1>
+
+ 
     <hr class="mb-6 mt-2">
         
                         {!! Form::model($course, ['route' => ['instructor.courses.update', $course],'method'=>'put','files'=>'true']) !!}
