@@ -2,14 +2,14 @@
 
 <h3> Objetivo del Proyecto </h3>
 
-<p> El motivo del proyecto es para el desarrollo de habilidades dentro del framework Laravel, esto aplicado a nuestro proyecto que trata sobre la venta de cursos en linea </p>
+<p> El motivo del proyecto es para el desarrollo de habilidades dentro del framework Laravel, esto aplicado a nuestro proyecto que trata sobre la venta de cursos en linea .</p>
 
 <h3> Integrantes </h3>
 
-<p>Ramirez Alondra</p>
-<p>Mercado Oswaldo</p>
+<p>Ramirez Alondra.</p>
+<p>Mercado Oswaldo.</p>
 
-<h3> Instrucciones de Instalacion </h3>
+<h3> Instrucciones de Instalacion. </h3>
 
 <p>Primero clonaremos el repositorio con el comando: git clone https://github.com/oswaldomercado26/proyectoProgramacion.git </p>
 <p>Despues nos dirigiremos a la carpeta que se creo con el proyecto e instalaremos el composer con el comando: composer install</p>
@@ -20,14 +20,16 @@
 <p>Luego creamos un acceso directo en la carpeta public con el comando: php artisan storage:link </p>
 <p>Procederemos a crear una carpeta que se llame courses para guardar los factories </p>
 <p>Despues llenaremos la base de datos con texto de relleno con el comando: php artisan migrate:fresh --seed </p>
-<p>En este punto se puede probar con el comando: php artisan serve (si no funciona es porque faltan instalaciones de tailwind)</p>
-<p>php artisan vendor:publish --tag=jetstream-views Este comando es para las vistas de Tailwind</p>
-<p>npm install tailwindcss Para instalar los npm</p>
-<p>php artisan vendor:publish --tag=laravel-pagination Para que se detecten las paginaciones en formato correcto </p>
-<p>php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" Genera los roles </p>
+<p>En este punto se puede probar con el comando: php artisan serve (si no funciona es porque faltan instalaciones de tailwind).</p>
+<p>php artisan vendor:publish --tag=jetstream-views Este comando es para las vistas de Tailwind.</p>
+<p>npm install tailwindcss Para instalar los npm.</p>
+<p>php artisan vendor:publish --tag=laravel-pagination Para que se detecten las paginaciones en formato correcto. </p>
+<p>php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" Genera los roles. </p>
 <p>Una vez hechos todos estos pasos, el proyecto ya debe ser funcional para lo cual procederemos a habilitar la API de Paypal 
 con el comando: composer require paypal/rest-api-sdk-php:* </p>
 <p>Seguidamente correremos el siguiente comando para recibir los correos de aprobacion o rechazo de cursos: php artisan queue:work </p>
+<h5> Acceso Administrador </h5>
+<p>Para hacer uso de la vista de administrador el gmail es: admin.Course@gmail.com y la contraseña es: 12345678.
 <h4> Vista Bienvenida </h4>
 <img class="imagenDerecha" src="/public/img/home/Bienvenida.JPG"  width="1280" height="720">
 
