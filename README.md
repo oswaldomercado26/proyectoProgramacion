@@ -32,6 +32,8 @@ con el comando: composer require paypal/rest-api-sdk-php:* </p>
 <p>Para hacer uso de la vista de administrador el gmail es: admin.Course@gmail.com y la contraseña es: 12345678.
 <h4> Vista Bienvenida </h4>
 <img class="imagenDerecha" src="/public/img/home/Bienvenida.JPG"  width="1280" height="720">
+<h4> Base de Datos </h4>
+<img class="imagenDerecha" src="/public/img/home/Base_de_Datos.jpeg"  width="1280" height="720">
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
