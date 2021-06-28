@@ -17,6 +17,9 @@
 <p>Tambien ejecutaremos los siguientes comandos uno a la vez: npm install npm, npm install node y npm run dev</p>
 <p>Despues renombraremos nuestro archivo .env.example como .env con el comando: cp .env.example .env</p>
 <p>A continuacion procederemos a crear la llave con el comando: php artisan key:generate</p>
+<p>Luego creamos un acceso directo en la carpeta public con el comando: php artisan storage:link </p>
+<p>Procederemos a crear una carpeta que se llame courses para guardar los factories </p>
+<p>Despues llenaremos la base de datos con texto de relleno con el comando: php artisan migrate:fresh --seed </p>
 <p>En este punto se puede probar con el comando: php artisan serve (si no funciona es porque faltan instalaciones de tailwind)</p>
 <p>php artisan vendor:publish --tag=jetstream-views Este comando es para las vistas de Tailwind</p>
 <p>npm install tailwindcss Para instalar los npm</p>
